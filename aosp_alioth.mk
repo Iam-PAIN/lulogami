@@ -38,8 +38,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
-# Inherit some common potato stuff.
-$(call inherit-product, vendor/potato/config/common_full_phone.mk)
+# Inherit some common Prooton stuff
+$(call inherit-product, vendor/proton/build/common.mk)
+PROTONPLUS_BUILD_VARIANT := OFFICIAL
 
 $(call inherit-product, device/xiaomi/alioth/device.mk)
 
@@ -48,7 +49,7 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
-PRODUCT_NAME := potato_alioth
+PRODUCT_NAME := aosp_alioth
 PRODUCT_DEVICE := alioth
 PRODUCT_MODEL := M2012K11AG
 
